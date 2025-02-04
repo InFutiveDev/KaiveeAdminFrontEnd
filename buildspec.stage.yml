@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 848186050993.dkr.ecr.ap-southeast-1.amazonaws.com
+  build:
+    commands:
+      - docker build -t admin-app-stage -f dockerfile.stage .
+      - docker tag admin-app-stage:latest 848186050993.dkr.ecr.ap-southeast-1.amazonaws.com/admin-app-stage:latest
+      - docker push 848186050993.dkr.ecr.ap-southeast-1.amazonaws.com/admin-app-stage:latest
+      #- docker tag admin-app-prod:latest 848186050993.dkr.ecr.ap-southeast-1.amazonaws.com/admin-app-prod:admin-app-prod$CODEBUILD_BUILD_NUMBER
+      #- docker push 848186050993.dkr.ecr.ap-southeast-1.amazonaws.com/admin-app-prod:admin-app-prod$CODEBUILD_BUILD_NUMBER
+      - echo build completed
+      - aws ecs update-service --cluster "tus-staging-fargate-cluster" --service "stage-admin-app" --task-definition stage-admin-app --force-new-deployment
+  post_build:
+    commands:

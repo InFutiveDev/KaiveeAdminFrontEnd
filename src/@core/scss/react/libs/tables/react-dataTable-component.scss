@@ -1,0 +1,241 @@
+@import '../../../base/bootstrap-extended/include';
+@import '../../../base/components/include';
+
+.gIMaKV{
+ border: 1px solid #eee;
+}
+
+// .gYMbQq{
+//  border-right: 1px solid #eee;
+// }
+.react-dataTable {
+  padding: 6px;
+
+  border-radius: 10;
+
+  .rdt_TableHead {
+    .rdt_TableHeadRow {
+      background-color: $table-head-bg;
+      // margin-bottom: 10px;
+      border: 0px solid;
+      // border-color: $border-color;
+      min-height: 0;
+      height: 48px;
+      // border-radius: 8px !important;
+
+      .rdt_TableCol {
+
+        // padding: 0.72rem 1.5rem;
+        .rdt_TableCol_Sortable {
+          color: $body-color;
+          font-weight: bold;
+          font-size: 1rem;
+          font-style: 0.857rem;
+          letter-spacing: 0.5px;
+          text-transform: capitalize;
+
+          &:hover {
+            color: $body-color;
+          }
+        }
+      }
+    }
+  }
+
+  .rdt_TableBody {
+    background-color: transparent !important;
+
+    .rdt_TableRow {
+      // margin: 4px;
+      // border-radius: 10px;
+      // padding: 10px ;
+      box-shadow: 0 1px 3px 0 rgba(34, 41, 47, 0.1);
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      .sc-AxhCb{
+        border-right: 1px solid #eee ;
+      }
+    }
+
+    .rdt_TableRow:hover {
+      box-shadow: 0 4px 6px 0 rgba(34, 41, 47, 0.1);
+      // background: #f1f3f4cc;
+      cursor: pointer;
+    }
+
+    .rdt_TableRow {
+      .rdt_TableCell {
+
+        // height: 53px;
+        // padding: 0.72rem 1.5rem;
+
+        .column-action {
+          svg {
+            stroke: $body-color;
+          }
+
+          .dropdown-item:hover {
+            svg {
+              stroke: $primary;
+            }
+          }
+
+          .dropdown-item:active {
+            svg {
+              stroke: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .react-paginate {
+    &.separated-pagination {
+
+      .page-item:first-child .page-link,
+      .page-item:last-child .page-link {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.rdt_Pagination {
+  select {
+    min-width: 30px;
+
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+}
+.un_paid {
+  color: #F7A708;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+  border: 1px solid #F7A708 ;
+}
+.is_paid {
+  border-radius: 5px;
+  // width: 100%;
+  padding: 5px 13px;
+  display: inline-block;
+  border: 1px solid rgb(4, 172, 46) ;
+  color: rgb(4, 172, 46);
+}
+.dataTable-filter {
+  max-width: 220px;
+}
+
+.dataTable-select {
+  width: 5rem;
+
+  &:not([multiple='multiple']) {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    background-position: calc(100% - 12px) 10px, calc(100% - 20px) 12px, 100% 0;
+    background-size: 10px 10px, 10px 10px;
+  }
+}
+
+.dark-layout {
+  .app-user-list {
+    header {
+      background-color: $theme-dark-card-bg;
+    }
+  }
+
+  .react-dataTable {
+    .hlidmt {
+      background-color: $theme-dark-card-bg;
+    }
+
+    .khKjDK {
+      background-color: $theme-dark-card-bg;
+      color: $theme-dark-body-color;
+    }
+
+    .rdt_Table {
+      background: $theme-dark-table-header-bg;
+      color: $theme-dark-body-color;
+    }
+
+    .rdt_TableHead {
+      .rdt_TableHeadRow {
+        background-color: $theme-dark-table-header-bg;
+        border-color: $theme-dark-border-color;
+
+        .rdt_TableCol {
+          color: $theme-dark-body-color;
+
+          div[role='button'] {
+            color: $theme-dark-body-color;
+          }
+        }
+
+        .rdt_TableCol_Sortable,
+        .rdt_TableCol_Sortable:hover {
+          color: $theme-dark-headings-color;
+
+          svg {
+            stroke: $theme-dark-headings-color;
+          }
+        }
+      }
+    }
+
+    .rdt_TableBody {
+      .expandable-content {
+        background-color: $theme-dark-table-bg;
+        color: $theme-dark-body-color;
+      }
+
+      .rdt_TableRow {
+        background-color: $theme-dark-table-bg;
+        color: $theme-dark-body-color;
+        border-color: $theme-dark-border-color;
+
+        .rdt_TableCell {
+          color: $theme-dark-body-color;
+        }
+
+        button {
+          &:hover:not(:disabled) {
+            background-color: $theme-dark-body-bg;
+          }
+
+          svg {
+            color: $theme-dark-body-color;
+          }
+        }
+      }
+    }
+
+    .rdt_Pagination {
+      background-color: $theme-dark-table-bg;
+      color: $theme-dark-body-color;
+
+      svg {
+        fill: $theme-dark-body-color;
+      }
+    }
+  }
+
+  .rdt_Pagination {
+    color: $theme-dark-body-color;
+    background-color: $theme-dark-card-bg;
+
+    button {
+      svg {
+        fill: $theme-dark-body-color;
+      }
+
+      &[disabled] svg {
+        fill: $theme-dark-text-muted-color;
+      }
+    }
+  }
+}
