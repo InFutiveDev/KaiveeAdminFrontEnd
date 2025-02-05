@@ -27,7 +27,7 @@ import "@styles/base/pages/page-auth.scss";
 import ToastContent from "../../components/toastContent";
 
 import themeConfig from "@configs/themeConfig";
-import Source from "../../../assets/images/pages/login-v2.svg";
+import Source from "../../../assets/images/pages/register-v2.svg";
 const Login = (props) => {
   const [skin, setSkin] = useSkin();
   const ability = useContext(AbilityContext);
@@ -39,7 +39,7 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
 
   const { register, errors, handleSubmit } = useForm();
-  const illustration = skin === "dark" ? "login-v2-dark.svg" : "login-v2.svg";
+  const illustration = skin === "dark" ? "register-v2-dark.svg" : "register-v2.svg";
   // source = `@src/assets/images/pages/${illustration}`;
   // const source = `../../../assets/images/pages/${illustration}`;
 
@@ -102,7 +102,7 @@ const Login = (props) => {
             <CardTitle tag="h2" className="font-weight-bold mb-1">
               <div className="d-flex justify-content-center my-4">
                 <img
-                  style={{ height: "50px" }}
+                  style={{ height: "100px" }}
                   src={themeConfig.app.appLogoImage}
                   alt="logo"
                 />
