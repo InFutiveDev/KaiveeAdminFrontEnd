@@ -10,13 +10,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { handleLogout } from "@store/actions/auth";
 
 // ** Third Party Components
-import {
-  UncontrolledDropdown,
-  DropdownMenu,
-  DropdownToggle,
-  DropdownItem,
-} from "reactstrap";
-import { User, Settings, Power } from "react-feather";
+import { UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from "reactstrap";
+import { Power } from "react-feather";
 import { useHistory } from "react-router-dom";
 
 // ** Default Avatar
@@ -33,14 +28,7 @@ const renderUserAvatar = (row) => {
       />
     );
   } else {
-    return (
-      <Avatar
-        color={"primary"}
-        className="mr-1"
-        content={"Admin" || row?.name}
-        initials
-      />
-    );
+    return <Avatar color={"primary"} className="mr-1" content={"Admin" || row?.name} initials />;
   }
 };
 
@@ -52,33 +40,11 @@ const UserDropdown = () => {
 
   return (
     <UncontrolledDropdown tag="li" className="dropdown-user nav-item">
-      <DropdownToggle
-        href="/"
-        tag="a"
-        className="nav-link dropdown-user-link"
-        onClick={(e) => e.preventDefault()}
-      >
+      <DropdownToggle href="/" tag="a" className="nav-link dropdown-user-link" onClick={(e) => e.preventDefault()}>
         {renderUserAvatar(profileInfo)}
       </DropdownToggle>
       <DropdownMenu right>
-        <DropdownItem className="w-100">
-          <User size={14} className="mr-75" />
-          <span className="align-middle">Profile</span>
-        </DropdownItem>
-        <DropdownItem divider />
-        <DropdownItem
-          className="w-100"
-          onClick={() => history.push("/apps/setting")}
-        >
-          <Settings size={14} className="mr-75" />
-          <span className="align-middle">Settings</span>
-        </DropdownItem>
-        <DropdownItem
-          className="w-100"
-          tag={Link}
-          to="/login"
-          onClick={() => dispatch(handleLogout())}
-        >
+        <DropdownItem className="w-100" tag={Link} to="/login" onClick={() => dispatch(handleLogout())}>
           <Power size={14} className="mr-75" />
           <span className="align-middle">Logout</span>
         </DropdownItem>

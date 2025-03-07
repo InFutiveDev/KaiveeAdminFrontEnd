@@ -49,15 +49,18 @@ const VerticalMenuHeader = (props) => {
 
   return (
     <div className="navbar-header" style={{ height: "100px" }}>
-      <NavLink
-        to="/admin"
-        className="w-100 d-flex justify-content-center align-items-center navbar-brand"
-      >
-        <span className="brand-logo">
-          <img src={Logo} alt="logo" />
-        </span>
-      </NavLink>
-    </div>
+  <a
+    href="https://www.kaiveehealthcare.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-100 d-flex justify-content-center align-items-center navbar-brand"
+  >
+    <span className="brand-logo">
+      <img src={Logo} alt="Kaivee Healthcare Logo" />
+    </span>
+  </a>
+</div>
+
   );
 };
 
