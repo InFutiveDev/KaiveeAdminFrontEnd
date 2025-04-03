@@ -336,7 +336,7 @@ const EditTest = () => {
                         defaultValue="1"
                         checked={payload?.itdose_offer_price_status == true}
                         onChange={handleChangeCheck}
-                        disabled
+                        //disabled
                         label="Active"
                       />
                     </Col>
@@ -349,7 +349,7 @@ const EditTest = () => {
                         checked={payload?.itdose_offer_price_status == false}
                         onChange={handleChangeCheck}
                         label="Inactive"
-                        disabled
+                        //disabled
                       />
                     </Col>
                   </Row>
