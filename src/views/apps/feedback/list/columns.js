@@ -31,6 +31,13 @@ export const columns = [
     cell: (row) => row?.mobile_number,
   },
   {
+    name: "Rating",
+    selector: "rating",
+    width: "120px",
+    sortable: true,
+    cell: (row) => row?.rating,
+  },
+  {
     name: "Message",
     width: "300px",
     cell: (row) => <span className="text-capitalize">{row?.message}</span>,
