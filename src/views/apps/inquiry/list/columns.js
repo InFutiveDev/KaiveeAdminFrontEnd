@@ -24,6 +24,13 @@ export const columns = [
     cell: (row) => row?.mobile_number,
   },
   {
+    name: "Appointment",
+    selector: "appointment_date",
+    width: "140px",
+    sortable: true,
+    cell: (row) => row?.appointment_date,
+  },
+  {
     name: "Message",
     width: "300px",
     cell: (row) => <span className="text-capitalize">{row?.message}</span>,
