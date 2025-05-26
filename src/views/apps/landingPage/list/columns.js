@@ -99,11 +99,8 @@ export const columns = [
     sortable: true,
     cell: (row) => (
       <a
-        href={`${
-          row?.landing_page_model === 1
-            ? `https://www.cityxrayclinic.com/ads/${row.url}`
-            : `https://www.cityxrayclinic.com/ads-two/${row.url}`
-        } `}
+       href={`https://www.kaiveehealthcare.com/${row?.landing_page_model === 1 ? "ads" : "ads-two"}/${row?.url || ""}`}
+
         target="_blank"
       >
         {" "}

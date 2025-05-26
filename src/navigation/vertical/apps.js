@@ -53,12 +53,12 @@ export default [
     icon: <HelpCircle size={20} />,
     navLink: "/apps/feedback/all",
   },
-  {
-    id: "BannerManagement",
-    title: "Banner Management",
-    icon: <Map size={20} />,
-    navLink: "/apps/banner/all",
-  },
+  // {
+  //   id: "BannerManagement",
+  //   title: "Banner Management",
+  //   icon: <Map size={20} />,
+  //   navLink: "/apps/banner/all",
+  // },
   {
     id: "HealthRiskManagement",
     title: "Health Risk Management",
