@@ -91,12 +91,12 @@ export default [
     navLink: "/admin/apps/menu/all",
   },
 
-  {
-    id: "PermissionManagement",
-    title: "Role Management",
-    icon: <UserCheck size={20} />,
-    navLink: "/admin/apps/permissions/all",
-  },
+  // {
+  //   id: "PermissionManagement",
+  //   title: "Role Management",
+  //   icon: <UserCheck size={20} />,
+  //   navLink: "/admin/apps/permissions/all",
+  // },
   {
     id: "AdminManagement",
     title: "Admin Management",
@@ -121,12 +121,12 @@ export default [
     icon: <Users size={20} />,
     navLink: "/admin/apps/order/all",
   },
-  {
-    id: "LandingPage",
-    title: "Landing Page",
-    icon: <Clock size={20} />,
-    navLink: "/apps/landing-page/all",
-  },
+  // {
+  //   id: "LandingPage",
+  //   title: "Landing Page",
+  //   icon: <Clock size={20} />,
+  //   navLink: "/apps/landing-page/all",
+  // },
 
   {
     id: "OurTeamPage",
