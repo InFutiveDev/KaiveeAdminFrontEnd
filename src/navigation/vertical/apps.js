@@ -182,4 +182,16 @@ export default [
     icon: <Bell size={20} />,
     navLink: "/apps/subscriber-page/all",
   },
+  {
+    id: "NotificationManagement",
+    title: "Notifications",
+    icon: <Bell size={20} />,
+    navLink: "/apps/notification/all"
+  },
+  {
+    id: "NotificationCategoryManagement",
+    title: "Notification Categories",
+    icon: <Bell size={20} />,
+    navLink: "/apps/notificationCategory/list"
+  },
 ];

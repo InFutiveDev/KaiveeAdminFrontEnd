@@ -36,6 +36,9 @@ import corporate from "./corporate";
 import careers from "./careers";
 import appliedJob from "./appliedJob";
 import franchises from "./franchises";
+import notification from "./notification";
+import notificationCategory from "./notificationCategory";
+
 const rootReducer = combineReducers({
   auth,
   navbar,
@@ -71,6 +74,8 @@ const rootReducer = combineReducers({
   careers,
   appliedJob,
   franchises,
+  notification,
+  notificationCategory
 });
 
 export default rootReducer;

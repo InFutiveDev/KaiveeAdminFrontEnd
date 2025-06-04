@@ -295,6 +295,33 @@ const AppRoutes = [
     exact: true,
     component: lazy(() => import("../../views/apps/order/list")),
   },
+  // ...notification routes...
+  {
+    path: "/apps/notification/all",
+    exact: true,
+    component: lazy(() => import("../../views/apps/notification/list")),
+  },
+  {
+    path: "/apps/notification/add",
+    exact: true,
+    component: lazy(() => import("../../views/apps/notification/add")),
+  },
+  {
+    path: "/apps/notificationCategory/list",
+    exact: true,
+    component: lazy(() => import("../../views/apps/notificationCategory/list")),
+  },
+  {
+    path: "/apps/notificationCategory/add",
+    exact: true,
+    component: lazy(() => import("../../views/apps/notificationCategory/add")),
+  },
+  {
+    path: "/apps/notificationCategory/edit/:id",
+    exact: true,
+    component: lazy(() => import("../../views/apps/notificationCategory/edit")),
+  },
+  // ...notification routes...
 ];
 
 export default AppRoutes;
